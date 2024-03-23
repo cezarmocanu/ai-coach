@@ -1,4 +1,5 @@
 import { FC } from "react";
+import clsx from "clsx";
 
 export enum SampleAtomVariant {
   default = "default",
@@ -27,18 +28,25 @@ export const SampleAtom: FC<Props> = ({
 } = defaultProps) => {
   return (
     <button
-      className="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-lg flex items-center space-x-4"
+      className={clsx(
+        "flex flex-col items-center max-w-sm space-x-4",
+        "p-6 rounded-xl shadow-lg",
+        "dark:bg-surface dark:text-onSurface"
+      )}
       onClick={onClick}
     >
       {variant === SampleAtomVariant.default && (
-        <div className="shrink-0 bg-blue-50 rounded-full p-3">
+        <div
+          className={clsx(
+            "shrink-0 rounded-full p-3",
+            "dark:bg-surfaceMuted dark:text-onSurface"
+          )}
+        >
           <span className="text-2xl">SA</span>
         </div>
       )}
-      <div className="flex flex-col items-start w-36">
-        <div className="text-xl font-medium text-black">{label}</div>
-        <p className="text-slate-500">{description}</p>
-      </div>
+      <div className="text-xl font-medium">{label}</div>
+      <p>{description}</p>
     </button>
   );
 };
