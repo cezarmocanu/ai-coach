@@ -1,5 +1,5 @@
 ## Conventions
-
+- Branch names will be `AIC-[issueNumber]-name-of-task` such as `AIC-0-create-initia-sturcture`
 - Any generic component should be created inside the `shared/components` folder in the component that matches it's composition
 - Components don't deal with business. If the component uses any data from the business side, then it will need an abstract interface to do it.
 
