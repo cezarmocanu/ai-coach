@@ -3,14 +3,14 @@ import { ChevronDownVariant } from "./ChevronDown";
 
 const meta = {
   title: "atoms/ChevronDown",
-  component: ChevronDown,
+  component: ChevronDownVariant,
   parameters: {
     layout: "centered",
   },
   tags: ["autodocs"],
   argTypes: {},
   args: {},
-} satisfies Meta<typeof ChevronDown>;
+} satisfies Meta<typeof ChevronDownVariant>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
