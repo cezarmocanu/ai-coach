@@ -1,6 +1,6 @@
 import { FC, useState } from "react";
 import { styles } from "./SampleComponent.styles";
-import { ChevronDown } from "@/shared/components/atoms/ChevronDown";
+import { ChevronDown, ChevronDownVariant } from "@/shared/components/atoms/ChevronDown";
 import { ChevronUp } from "@/shared/components/atoms/ChevronUp";
 
 /**Variants of a component should not be passed as props to private components */
