@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import { styles } from "./SampleComponent.styles";
 import { ChevronDown, ChevronDownVariant } from "@/shared/components/atoms/ChevronDown";
-import { ChevronUp } from "@/shared/components/atoms/ChevronUp";
+import { ChevronUp, ChevronUpVariant} from "@/shared/components/atoms/ChevronUp";
 
 /**Variants of a component should not be passed as props to private components */
 export enum SampleComponentVariant {
@@ -74,10 +74,12 @@ const ExpandableDescription: FC<DescriptionProps> = ({ description }) => {
 
   const renderButtonIcon = () => {
     if (isExpanded) {
-      return <ChevronUp />;
+      return <ChevronUp
+      variant={ChevronUpVariant.outline} />;
     }
 
-    return <ChevronDown />;
+    return <ChevronDown
+    variant={ChevronDownVariant.outline} />;
   };
 
   return (
