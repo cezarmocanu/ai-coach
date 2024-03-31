@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ChevronUp } from "./ChevronUp";
+import { ChevronUp, ChevronUpVariant } from "./ChevronUp";
 
 const meta = {
   title: "atoms/ChevronUp",
@@ -15,4 +15,23 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Outlined: Story = {
+  args: {
+    variant: ChevronUpVariant.outline,
+ }
+};
+export const Solid: Story = {
+  args: {
+    variant: ChevronUpVariant.solid,
+ }
+}
+export const Mini: Story = {
+  args: {
+    variant: ChevronUpVariant.mini,
+ }
+}
+export const Micro: Story = {
+  args: {
+    variant: ChevronUpVariant.micro,
+ }
+}

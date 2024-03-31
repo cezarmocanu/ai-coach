@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import { ChevronDown } from "./ChevronDown";
+import { ChevronDown, ChevronDownVariant } from "./ChevronDown";
 
 const meta = {
   title: "atoms/ChevronDown",
@@ -15,4 +15,23 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
+export const Outlined: Story = {
+  args: {
+    variant: ChevronDownVariant.outline,
+ }
+};
+export const Solid: Story = {
+  args: {
+    variant: ChevronDownVariant.solid,
+ }
+}
+export const Mini: Story = {
+  args: {
+    variant: ChevronDownVariant.mini,
+ }
+}
+export const Micro: Story = {
+  args: {
+    variant: ChevronDownVariant.micro,
+ }
+}
